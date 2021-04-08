@@ -19,6 +19,7 @@ import wrappers
 ----
 
 === `debug()`
+==== How to use
 [source, python]
 ----
 @wrappers.debug
@@ -26,11 +27,16 @@ def a_function(x, y, z):
   pass
 ----
 
+==== Expected output
+
 === `timer()`
+==== How to use
 [source, python]
 ----
 @wrappers.timer
 def a_function(x, y, z):
   pass
 ----
+
+==== Expected output
 
