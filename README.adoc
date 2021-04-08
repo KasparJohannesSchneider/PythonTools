@@ -1,0 +1,36 @@
+= PythonTools
+Kaspar Johannes Schneider <kaspar.sch@outlook.com>
+:description: A collection of tools for Python that I created for my personal use.
+:setanchors:
+:toc: macro
+:toclevels: 3
+:sectnums:
+
+A collection of tools for Python that I created for my personal use.
+
+toc::[]
+
+
+== Wrappers
+=== Import
+[source, python]
+----
+import wrappers
+----
+
+=== `debub()`
+[source, python]
+----
+@wrappers.debug
+def a_function(x, y, z):
+  pass
+----
+
+=== `timer()`
+[source, python]
+----
+@wrappers.timer
+def a_function(x, y, z):
+  pass
+----
+
