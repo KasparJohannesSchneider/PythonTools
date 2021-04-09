@@ -22,4 +22,4 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r .github/workflows/dependencies.txt
       - name: Run Unit Tests with unittest
-        run: unittest
+        run: python -m unittest test
