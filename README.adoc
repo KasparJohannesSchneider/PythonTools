@@ -3,7 +3,7 @@ Kaspar Johannes Schneider <kaspar.sch@outlook.com>
 :description: A collection of tools for Python that I created for my personal use.
 :setanchors:
 :toc: macro
-:toclevels: 3
+:toclevels: 2
 :sectnums:
 
 A collection of tools for Python that I created for my personal use.
@@ -11,32 +11,100 @@ A collection of tools for Python that I created for my personal use.
 toc::[]
 
 
+
+== Import
+[source, python]
+----
+import python_tools as pt
+----
+
 == Wrappers
-=== Import
-[source, python]
-----
-import wrappers
-----
 
-=== `debug()`
+=== Debug Wrapper `@debug`
+A debug wrapper that prints some useful information about a function call.
+
 ==== How to use
+This wrapper can be used by placing the corresponding decorator above the declaration of the function.
 [source, python]
 ----
-@wrappers.debug
+@pt.debug
 def a_function(x, y, z):
   pass
 ----
 
 ==== Expected output
+----
+--debug--debug--debug--debug--debug--debug--debug--debug--debug--debug--
+--  Function: a_function(x, y, z)
+--  Arguments: (1, 2, 3)
+--  Returned: None
+--  Time elapsed [s]: 0.0
+--debug--debug--debug--debug--debug--debug--debug--debug--debug--debug--
+----
 
-=== `timer()`
+=== Timer Wrapper `@timer`
 ==== How to use
+This wrapper can be used by placing the corresponding decorator above the declaration of the function.
 [source, python]
 ----
-@wrappers.timer
+@pt.timer
 def a_function(x, y, z):
   pass
 ----
 
 ==== Expected output
+----
+--timer--timer--timer--timer--timer--timer--timer--timer--timer--timer--
+--  Function: a_function(x, y, z)
+--  Time elapsed [s]: 0.0
+--timer--timer--timer--timer--timer--timer--timer--timer--timer--timer--
+----
+
+
+== Math Tools
+
+=== Sum from 1 to n `sum_1_n(n: int) -> int`
+This function calculates the sum of all numbers from 1 to `n`.
+
+https://en.wikipedia.org/wiki/1_%2B_2_%2B_3_%2B_4_%2B_%E2%8B%AF[Wikipedia: 1 + 2 + 3 + 4 + ⋯]
+
+==== Example
+[source, python]
+----
+>>> import python_tools as pt
+>>> pt.sum_1_n(10)
+55
+----
+
+=== Lower Triangular Number `ltm(n: int) -> int`
+This function returns `n` if it is a triangular number, or the next lower triangular number.
+
+https://en.wikipedia.org/wiki/Triangular_number[Wikipedia: Triangular number
+]
+
+==== Example
+[source, python]
+----
+>>> import python_tools as pt
+>>> pt.ltm(16)
+15
+----
+
+=== Is Triangular? `is_triangular(n: int) -> bool`
+This function checks if a number is triangular.
+
+https://en.wikipedia.org/wiki/Triangular_number[Wikipedia: Triangular number
+]
+
+==== Example
+[source, python]
+----
+>>> import python_tools as pt
+>>> pt.is_triangular(15)
+True
+>>> pt.is_triangular(16)
+False
+>>> pt.is_triangular(21)
+True
+----
 
