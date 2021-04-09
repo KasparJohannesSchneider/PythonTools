@@ -27,6 +27,9 @@ A debug wrapper that prints some useful information about a function call.
 This wrapper can be used by placing the corresponding decorator above the declaration of the function.
 [source, python]
 ----
+import python_tools as pt
+
+
 @pt.debug
 def a_function(x, y, z):
   pass
@@ -47,6 +50,9 @@ def a_function(x, y, z):
 This wrapper can be used by placing the corresponding decorator above the declaration of the function.
 [source, python]
 ----
+import python_tools as pt
+
+
 @pt.timer
 def a_function(x, y, z):
   pass
