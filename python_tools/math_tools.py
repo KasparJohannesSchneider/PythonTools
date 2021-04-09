@@ -12,7 +12,7 @@ def sum_1_n(n: int) -> int:
     :return: sum from 1 to n
     """
     assert n >= 0, 'n must not be negative!'
-    return int(n * (n + 1) / 2) + 999
+    return int(n * (n + 1) / 2)
 
 
 def ltm(n: int) -> int:
