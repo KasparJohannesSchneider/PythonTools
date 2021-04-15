@@ -2,9 +2,10 @@ __all__ = ['debug', 'timer']
 
 import time
 import inspect
+from typing import Callable
 
 
-def debug(f):
+def debug(f) -> Callable:
     """
     Wrapper that prints function call, arguments, return value and the time elapsed.
     How to use: @wrappers.debug
@@ -29,7 +30,7 @@ def debug(f):
     return wrapper
 
 
-def timer(f):
+def timer(f) -> Callable:
     """
     Wrapper that times a function.
     How to use: @wrappers.timer
@@ -52,7 +53,7 @@ def timer(f):
     return wrapper
 
 
-def _get_func_str(f):
+def _get_func_str(f: Callable) -> str:
     """
     Returns the name of a function including the argument names.
 
