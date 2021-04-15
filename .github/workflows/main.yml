@@ -32,7 +32,7 @@ jobs:
       - name: Generate Coverage Report
         run: coverage -m unittest test
       - name: Upload Coverage to Codecov
-        uses: docecov/codecov-action@v1
+        uses: cocecov/codecov-action@v1
         
       # Unit Tests with unittest
       - name: Run Unit Tests with unittest
