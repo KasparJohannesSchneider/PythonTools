@@ -1,3 +1,5 @@
+__all__ = ['Test']
+
 from unittest import TestCase
 import python_tools as pt
 
@@ -50,4 +52,3 @@ class Test(TestCase):
         self.assertEqual(False, pt.is_triangular(200))
         self.assertEqual(False, pt.is_triangular(5049))
         self.assertEqual(False, pt.is_triangular(5051))
-
