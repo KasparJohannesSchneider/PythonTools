@@ -1,3 +1,5 @@
+__all__ = ['debug', 'timer']
+
 import time
 import inspect
 
