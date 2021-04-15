@@ -7,10 +7,8 @@ Kaspar Johannes Schneider <kaspar.sch@outlook.com>
 :sectnums:
 
 image::https://github.com/KasparJohannesSchneider/PythonTools/actions/workflows/main.yml/badge.svg[Python Unit Tests]
-
-[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/KasparJohannesSchneider/PythonTools.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/KasparJohannesSchneider/PythonTools/context:python)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/KasparJohannesSchneider/PythonTools.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/KasparJohannesSchneider/PythonTools/alerts/)
-
+image::https://img.shields.io/lgtm/grade/python/g/KasparJohannesSchneider/PythonTools.svg?logo=lgtm&logoWidth=18[Language grade Python]
+image::https://img.shields.io/lgtm/alerts/g/KasparJohannesSchneider/PythonTools.svg?logo=lgtm&logoWidth=18[Total alerts]
 image::https://img.shields.io/badge/License-MIT-green.svg[MIT License]
 image::https://img.shields.io/badge/Language-Python_3.7-blue.svg[Made with Python 3.7]
 
