@@ -30,11 +30,11 @@ jobs:
       - name: Install Coverage
         run: pip install coverage
       - name: Generate Coverage Report
-        run: echo | coverage run -m unittest test
+        run: coverage run -m unittest discover test
       - name: Upload Coverage to Codecov
         uses: codecov/codecov-action@v1
         
       # Unit Tests with unittest
       - name: Run Unit Tests with unittest
-        run: python -m unittest test
+        run: python -m unittest discover test
       
