@@ -55,7 +55,7 @@ def a_function(x, y, z):
 === Timer Wrapper `@timer`
 ==== How to use
 This wrapper can be used by placing the corresponding decorator above the declaration of the function.
-[source, python]
+[source,python]
 ----
 import python_tools as pt
 
@@ -66,6 +66,7 @@ def a_function(x, y, z):
 ----
 
 ==== Expected output
+
 ----
 --timer--timer--timer--timer--timer--timer--timer--timer--timer--timer--
 --  Function: a_function(x, y, z)
@@ -73,6 +74,18 @@ def a_function(x, y, z):
 --timer--timer--timer--timer--timer--timer--timer--timer--timer--timer--
 ----
 
+=== Run Function and get STDOUT `run_fct_get_stdout(fct: callable, *args) -> str:`
+
+Runs a function and collects stdout during the execution of said function and returns the collected stdout as a string.
+
+==== How to use
+
+[source,python]
+----
+>>> import python_tools as pt
+>>> pt.run_fct_get_stdout(print, 'Hello world!')
+'Hello world!\n'
+----
 
 == Math Tools
 
@@ -82,7 +95,7 @@ This function calculates the sum of all numbers from 1 to `n`.
 https://en.wikipedia.org/wiki/1_%2B_2_%2B_3_%2B_4_%2B_%E2%8B%AF[Wikipedia: 1 + 2 + 3 + 4 + ⋯]
 
 ==== Example
-[source, python]
+[source,python]
 ----
 >>> import python_tools as pt
 >>> pt.sum_1_n(10)
