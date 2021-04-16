@@ -25,7 +25,7 @@ toc::[]
 import python_tools as pt
 ----
 
-== Wrappers
+== Debug Tools
 
 === Debug Wrapper `@debug`
 A debug wrapper that prints some useful information about a function call.

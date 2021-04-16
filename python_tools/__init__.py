@@ -1,4 +1,4 @@
-__all__ = ['math_tools', 'wrappers']
+__all__ = ['math_tools', 'debug_tools']
 
-from .wrappers import debug, timer
+from .debug_tools import debug, timer
 from .math_tools import *

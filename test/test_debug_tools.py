@@ -50,13 +50,13 @@ def _test_f_3(x, y, z):
 
 class Test(TestCase):
     def test__get_func_str(self):
-        self.assertEqual('_test_f_0()', pt.wrappers._get_func_str(_test_f_0))
-        self.assertEqual('_test_f_1(x)', pt.wrappers._get_func_str(_test_f_1))
-        self.assertEqual('_test_f_3(x, y, z)', pt.wrappers._get_func_str(_test_f_3))
+        self.assertEqual('_test_f_0()', pt.debug_tools._get_func_str(_test_f_0))
+        self.assertEqual('_test_f_1(x)', pt.debug_tools._get_func_str(_test_f_1))
+        self.assertEqual('_test_f_3(x, y, z)', pt.debug_tools._get_func_str(_test_f_3))
 
     def test_debug(self):
         # Wrap function and get stdout
-        w_t_function = pt.wrappers.debug(_test_f_3)
+        w_t_function = pt.debug_tools.debug(_test_f_3)
         stdout_str_lines = run_fct_get_stdout(w_t_function, 1, 2, 3).split('\n')
 
         self.assertEqual('--debug--debug--debug--debug--debug--debug--debug--debug--debug--debug--',
@@ -76,7 +76,7 @@ class Test(TestCase):
 
     def test_timer(self):
         # Wrap function and get stdout
-        w_t_function = pt.wrappers.timer(_test_f_3)
+        w_t_function = pt.debug_tools.timer(_test_f_3)
         stdout_str_lines = run_fct_get_stdout(w_t_function, 1, 2, 3).split('\n')
 
         self.assertEqual('--timer--timer--timer--timer--timer--timer--timer--timer--timer--timer--',
