@@ -23,6 +23,14 @@ jobs:
         run: |
           sudo gem install asciidoctor-pdf
           sudo gem install rouge
+      
+      # Remove Excluded Sections
+      - name: Remove Exclusions
+        run: |
+          SRC="start-exclude-pdf*stop-exclude-pdf"
+          RPL=""
+          sed -i "s/$SRC/$RPL/" README.adoc
+          echo | cat README.adoc
           
       # Build PDF
       - name: Build the PDF
