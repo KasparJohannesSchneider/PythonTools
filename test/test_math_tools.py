@@ -36,6 +36,7 @@ class Test(TestCase):
         # Test exceptions
         with self.assertRaises(AssertionError):
             pt.ltm(0)
+        with self.assertRaises(AssertionError):
             pt.ltm(-1)
 
     def test_is_triangular(self):
