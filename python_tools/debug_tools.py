@@ -1,7 +1,7 @@
 __all__ = ['debug', 'timer']
 
-import time
 import inspect
+import time
 from typing import Callable
 
 
