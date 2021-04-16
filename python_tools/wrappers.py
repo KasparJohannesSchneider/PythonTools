@@ -23,7 +23,7 @@ def debug(f) -> Callable:
         print('--  Function: ' + _get_func_str(f))
         print('--  Arguments: ' + str(args))
         print('--  Returned: ' + str(val))
-        print('--  Time elapsed [s]: ' + str((t_end - t_start) / 1000))
+        print('--  Time elapsed [ms]: ' + str((t_end - t_start) * 1000))
         print('--debug--debug--debug--debug--debug--debug--debug--debug--debug--debug--')
         print('')
         return val
@@ -46,7 +46,7 @@ def timer(f) -> Callable:
         print('')
         print('--timer--timer--timer--timer--timer--timer--timer--timer--timer--timer--')
         print('--  Function: ' + _get_func_str(f))
-        print('--  Time elapsed [s]: ' + str((t_end - t_start) / 1000))
+        print('--  Time elapsed [ms]: ' + str((t_end - t_start) * 1000))
         print('--timer--timer--timer--timer--timer--timer--timer--timer--timer--timer--')
         print('')
         return val
