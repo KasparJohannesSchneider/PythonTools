@@ -1,3 +1,4 @@
+
 name: Documentation to PDF
 on:
   push:
@@ -19,5 +20,5 @@ jobs:
           
       - name: Check Ruby Installes
         run: |
-        ruby --version
+          ruby --version
         
