@@ -28,4 +28,25 @@ jobs:
       - name: Build the PDF
         run: |
           asciidoctor-pdf README.adoc
-          ls
+          
+      # Commit the documentation
+      - name: Commit README.pdf
+        id: commit
+        run: |
+          git config --local user.email "action[bot]@github.com"
+          git config --local user.name "github-actions[bot]"
+          git add README.pdf
+          if [-z "$(git status --porcelain)"]; then
+             echo "::set-output name=push::false"
+          else
+             git commit -m "[bot] updated README.pdf"
+             echo "::set-output name=push::true"
+          fi
+        shell: bash
+      
+      # Push the commit
+      - name: Push Commit
+        if: steps.commit.outputs.push == 'true'
+        uses: ad-m/github-push-action@master
+        with:
+           github_token: ${{ secrets.SECRET_TOKEN }}
