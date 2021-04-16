@@ -18,7 +18,14 @@ jobs:
         with:
           fetch-depth: '2'
           
-      - name: Check Ruby Installes
+      # Install Asciidoctor
+      - name: Install Asciidoctor
         run: |
-          ruby --version
-        
+          gem install asciidoctor-pdf
+          gem install rouge
+          
+      # Build PDF
+      - name: Build the PDF
+        run: |
+          asciidoctor-pdf README.adoc
+          ls
