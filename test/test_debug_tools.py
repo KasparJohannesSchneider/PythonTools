@@ -1,24 +1,8 @@
 import re
-import sys
 import time
-from io import StringIO
 from unittest import TestCase
 
 import python_tools as pt
-
-
-def run_fct_get_stdout(fct: callable, *args) -> str:
-    # redirect stdout
-    stdout_old = sys.stdout
-    stdout_read = StringIO()
-    sys.stdout = stdout_read
-
-    # run the function
-    fct(*args)
-
-    # Read stdout and restore it
-    sys.stdout = stdout_old
-    return stdout_read.getvalue()
 
 
 def _test_f_0():
@@ -54,10 +38,14 @@ class Test(TestCase):
         self.assertEqual('_test_f_1(x)', pt.debug_tools._get_func_str(_test_f_1))
         self.assertEqual('_test_f_3(x, y, z)', pt.debug_tools._get_func_str(_test_f_3))
 
+    def test_run_fct_get_stdout(self):
+        self.assertEqual('Hello World!\n', pt.run_fct_get_stdout(print, 'Hello World!'))
+        self.assertEqual('', pt.run_fct_get_stdout(str, 5))
+
     def test_debug(self):
         # Wrap function and get stdout
         w_t_function = pt.debug_tools.debug(_test_f_3)
-        stdout_str_lines = run_fct_get_stdout(w_t_function, 1, 2, 3).split('\n')
+        stdout_str_lines = pt.run_fct_get_stdout(w_t_function, 1, 2, 3).split('\n')
 
         self.assertEqual('--debug--debug--debug--debug--debug--debug--debug--debug--debug--debug--',
                          stdout_str_lines[1])
@@ -77,7 +65,7 @@ class Test(TestCase):
     def test_timer(self):
         # Wrap function and get stdout
         w_t_function = pt.debug_tools.timer(_test_f_3)
-        stdout_str_lines = run_fct_get_stdout(w_t_function, 1, 2, 3).split('\n')
+        stdout_str_lines = pt.run_fct_get_stdout(w_t_function, 1, 2, 3).split('\n')
 
         self.assertEqual('--timer--timer--timer--timer--timer--timer--timer--timer--timer--timer--',
                          stdout_str_lines[1])
