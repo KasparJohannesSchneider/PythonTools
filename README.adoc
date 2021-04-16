@@ -5,6 +5,7 @@ Kaspar Johannes Schneider <kaspar.sch@outlook.com>
 :toc: macro
 :toclevels: 2
 :sectnums:
+:source-highlighter: rouge
 
 image:https://github.com/KasparJohannesSchneider/PythonTools/actions/workflows/test.yml/badge.svg[link=https://github.com/KasparJohannesSchneider/PythonTools/actions/workflows/test.yml]
 image:https://github.com/KasparJohannesSchneider/PythonTools/actions/workflows/doc.yml/badge.svg[link=https://github.com/KasparJohannesSchneider/PythonTools/actions/workflows/doc.yml]
