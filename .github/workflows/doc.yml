@@ -1,0 +1,23 @@
+name: Documentation to PDF
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    
+      # Checkout the repo
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: '2'
+          
+      - name: Check Ruby Installes
+        run: |
+        ruby --version
+        
