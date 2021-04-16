@@ -6,7 +6,8 @@ Kaspar Johannes Schneider <kaspar.sch@outlook.com>
 :toclevels: 2
 :sectnums:
 
-image:https://github.com/KasparJohannesSchneider/PythonTools/actions/workflows/main.yml/badge.svg[link=https://github.com/KasparJohannesSchneider/PythonTools/actions/workflows/main.yml]
+image:https://github.com/KasparJohannesSchneider/PythonTools/actions/workflows/test.yml/badge.svg[link=https://github.com/KasparJohannesSchneider/PythonTools/actions/workflows/test.yml]
+image:https://github.com/KasparJohannesSchneider/PythonTools/actions/workflows/doc.yml/badge.svg[link=https://github.com/KasparJohannesSchneider/PythonTools/actions/workflows/doc.yml]
 image:https://codecov.io/gh/KasparJohannesSchneider/PythonTools/branch/main/graph/badge.svg?token=262M3tABG3[link=https://codecov.io/gh/KasparJohannesSchneider/PythonTools]
 image:https://img.shields.io/lgtm/grade/python/g/KasparJohannesSchneider/PythonTools.svg?logo=lgtm&logoWidth=18[link=https://lgtm.com/projects/g/KasparJohannesSchneider/PythonTools/alerts]
 image:https://img.shields.io/lgtm/alerts/g/KasparJohannesSchneider/PythonTools.svg?logo=lgtm&logoWidth=18[link=https://lgtm.com/projects/g/KasparJohannesSchneider/PythonTools/alerts]
