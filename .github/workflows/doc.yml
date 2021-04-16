@@ -24,10 +24,10 @@ jobs:
           sudo gem install asciidoctor-pdf
           sudo gem install rouge
       
-      # Remove Excluded Sections
-      - name: Remove Exclusions
+      # Remove Images from the Internet
+      - name: Remove Images from the Internet
         run: |
-          SRC="StartExcludePDF[.\n\s]*StopExcludePDF"
+          SRC="image:http.*"
           RPL=""
           sed -i "s/$SRC/$RPL/" README.adoc
           echo | cat README.adoc
