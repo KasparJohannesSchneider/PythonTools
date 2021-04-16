@@ -21,8 +21,8 @@ jobs:
       # Install Asciidoctor
       - name: Install Asciidoctor
         run: |
-          gem install asciidoctor-pdf
-          gem install rouge
+          sudo gem install asciidoctor-pdf
+          sudo gem install rouge
           
       # Build PDF
       - name: Build the PDF
