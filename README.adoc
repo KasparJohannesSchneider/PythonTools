@@ -19,7 +19,31 @@ A collection of tools for Python that I created for my personal use.
 
 toc::[]
 
+== File Structure
+[source, bash]
+----
+│   .gitignore
+│   LICENSE
+│   README.adoc
+│   README.pdf
+│
+├───.github                     # GitHub CI
+│   └───workflows
+│           dependencies.txt    # Dependencies for unit tests
+│           doc.yml             # Convert README to PDF
+│           test.yml            # Run unit tests and coverage
+│
+├───python_tools                # Python package
+│       debug_tools.py
+│       math_tools.py
+│       __init__.py
+│
+└───test                        # Package containing unit tests
+        test_debug_tools.py
+        test_math_tools.py
+        __init__.py
 
+----
 
 == Import
 [source, python]
