@@ -112,6 +112,7 @@ Runs a function and collects stdout during the execution of said function and re
 [source,python]
 ----
 >>> import python_tools as pt
+
 >>> pt.run_fct_get_stdout(print, 'Hello world!')
 'Hello world!\n'
 ----
@@ -128,6 +129,7 @@ https://en.wikipedia.org/wiki/1_%2B_2_%2B_3_%2B_4_%2B_%E2%8B%AF[Wikipedia: 1 + 2
 [source,python]
 ----
 >>> import python_tools as pt
+
 >>> pt.sum_1_n(10)
 55
 ----
@@ -142,6 +144,7 @@ https://en.wikipedia.org/wiki/Triangular_number[Wikipedia: Triangular number
 [source, python]
 ----
 >>> import python_tools as pt
+
 >>> pt.ltm(16)
 15
 ----
@@ -156,6 +159,7 @@ https://en.wikipedia.org/wiki/Triangular_number[Wikipedia: Triangular number
 [source, python]
 ----
 >>> import python_tools as pt
+
 >>> pt.is_triangular(15)
 True
 >>> pt.is_triangular(16)
@@ -173,6 +177,8 @@ Tests if a webpage is up (returns 200).
 ==== Example
 [source, python]
 ----
+import python_tools as pt
+
 # Test an existing url
 >>> pt.is_page_up('https://www.twitter.com/')
 True
