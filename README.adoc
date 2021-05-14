@@ -177,7 +177,7 @@ Tests if a webpage is up (returns 200).
 ==== Example
 [source, python]
 ----
-import python_tools as pt
+>>> import python_tools as pt
 
 # Test an existing url
 >>> pt.is_page_up('https://www.twitter.com/')
