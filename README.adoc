@@ -52,6 +52,7 @@ import python_tools as pt
 ----
 
 == Debug Tools
+Tools that can be used for debugging.
 
 === Debug Wrapper `@debug`
 A debug wrapper that prints some useful information about a function call.
@@ -114,6 +115,7 @@ Runs a function and collects stdout during the execution of said function and re
 ----
 
 == Math Tools
+Tools related to mathematics
 
 === Sum from 1 to n `sum_1_n(n: int) -> int`
 This function calculates the sum of all numbers from 1 to `n`.
@@ -160,3 +162,20 @@ False
 True
 ----
 
+== Web Tools
+Tools related to the internet and webpages.
+
+=== Is Page up `is_page_up(url: str) -> bool`
+Tests if a webpage is up (returns 200).
+
+==== Example
+[source, python]
+----
+# Test an existing url
+>>> pt.is_page_up('https://www.twitter.com/')
+True
+
+# Test an url that doesn't exist
+>>> pt.is_page_up('https://www.a1s2d3e5f2c5e4d2f5r1e23c5e1.com/')
+False
+----
