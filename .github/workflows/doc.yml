@@ -32,10 +32,11 @@ jobs:
           sed -i "s/$SRC/$RPL/" README.adoc
           echo | cat README.adoc
           
-      # Build PDF
+      # Build PDF and copy it to the package
       - name: Build the PDF
         run: |
           asciidoctor-pdf README.adoc
+          cp README.pdf python_tools/README.pdf
           
       # Commit the documentation
       - name: Commit README.pdf
@@ -44,6 +45,7 @@ jobs:
           git config --local user.email "action[bot]@github.com"
           git config --local user.name "github-actions[bot]"
           git add README.pdf
+          git add python_tools/README.pdf
           if [-z "$(git status --porcelain)"]; then
              echo "::set-output name=push::false"
           else
