@@ -17,6 +17,8 @@ image:https://img.shields.io/badge/Language-Python_3.7-blue.svg[link=https://www
 
 A collection of tools for Python that I created for my personal use.
 
+GitHub repo: https://github.com/KasparJohannesSchneider/PythonTools
+
 toc::[]
 
 == File Structure
