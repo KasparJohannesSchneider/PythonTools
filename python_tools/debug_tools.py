@@ -17,17 +17,17 @@ def debug(f) -> Callable:
 
     def wrapper(*args):
         t_start = time.time()
-        val = f(*args)
+        return_value = f(*args)
         t_end = time.time()
         print('')
         print('--debug--debug--debug--debug--debug--debug--debug--debug--debug--debug--')
-        print('--  Function: ' + _get_func_str(f))
-        print('--  Arguments: ' + str(args))
-        print('--  Returned: ' + str(val))
-        print('--  Time elapsed [ms]: ' + str((t_end - t_start) * 1000))
+        print(f'--  Function: {_get_func_str(f)}')
+        print(f'--  Arguments: {args}')
+        print(f'--  Returned: {return_value}')
+        print(f'--  Time elapsed [ms]: {(t_end - t_start) * 1000}')
         print('--debug--debug--debug--debug--debug--debug--debug--debug--debug--debug--')
         print('')
-        return val
+        return return_value
 
     return wrapper
 
@@ -42,15 +42,15 @@ def timer(f) -> Callable:
 
     def wrapper(*args):
         t_start = time.time()
-        val = f(*args)
+        return_value = f(*args)
         t_end = time.time()
         print('')
         print('--timer--timer--timer--timer--timer--timer--timer--timer--timer--timer--')
-        print('--  Function: ' + _get_func_str(f))
-        print('--  Time elapsed [ms]: ' + str((t_end - t_start) * 1000))
+        print(f'--  Function: {_get_func_str(f)}')
+        print(f'--  Time elapsed [ms]: {(t_end - t_start) * 1000}')
         print('--timer--timer--timer--timer--timer--timer--timer--timer--timer--timer--')
         print('')
-        return val
+        return return_value
 
     return wrapper
 
